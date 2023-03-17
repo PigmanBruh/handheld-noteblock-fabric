@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "handheldnoteblock",
+  "version": "${version}",
+
+  "name": "Handheld Noteblock",
+  "description": "The goal of this mod is to add a handheld variant of noteblock which can be played without placing it down",
+  "authors": [
+    "PigmanBruh"
+  ],
+  "contact": {
+    "homepage": "*",
+    "sources": "https://github.com/PigmanYT3531/handheld-noteblock-fabric"
+  },
+
+  "license": "GPL-3.0",
+  "icon": "assets/handheldnoteblock/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.pigmanbruh.handheldnoteblock.Main"
+    ]
+  },
+  "mixins": [
+    "handheldnoteblock.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
