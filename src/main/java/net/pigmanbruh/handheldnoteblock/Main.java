@@ -1,4 +1,4 @@
-package net.pigmanbruh.vineboom;
+package net.pigmanbruh.handheldnoteblock;
 
 import net.pigmanbruh.handheldnoteblock.item.ModItem;
 
