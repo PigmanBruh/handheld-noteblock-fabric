@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Main implements ModInitializer {
-    public static final String Mod_ID = "handheld_noteblock";
+    public static final String Mod_ID = "hhnb";
     public static final Logger LOGGER = LoggerFactory.getLogger(Mod_ID);
 
     @Override
