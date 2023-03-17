@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "handheldnoteblock",
+  "id": "hhnb",
   "version": "${version}",
 
   "name": "Handheld Noteblock",
@@ -14,7 +14,7 @@
   },
 
   "license": "GPL-3.0",
-  "icon": "assets/handheldnoteblock/icon.png",
+  "icon": "assets/hhnb/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -23,7 +23,7 @@
     ]
   },
   "mixins": [
-    "handheldnoteblock.mixins.json"
+    "hhnb.mixins.json"
   ],
 
   "depends": {
