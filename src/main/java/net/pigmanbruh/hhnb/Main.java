@@ -1,4 +1,5 @@
-package net.pigmanbruh.handheldnoteblock;
+
+packagepackagpackagepackpackagepackagpackagepacpackagepackagpackagepackpackagepackagpackagepac  net.pigmanbruh.handheldnoteblock;
 
 import net.pigmanbruh.handheldnoteblock.item.ModItem;
 
