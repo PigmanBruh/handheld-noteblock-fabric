@@ -22,9 +22,6 @@
       "net.pigmanbruh.handheldnoteblock.Main"
     ]
   },
-  "mixins": [
-    "*"
-  ],
 
   "depends": {
     "fabricloader": ">=0.14.17",
