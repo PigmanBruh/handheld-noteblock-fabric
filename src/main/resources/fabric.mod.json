@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.pigmanbruh.handheldnoteblock.Main"
+      "net.pigmanbruh.hhnb.Main"
     ]
   },
   "mixins": [
