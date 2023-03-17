@@ -23,7 +23,7 @@
     ]
   },
   "mixins": [
-    "hhnb.mixins.json"
+    "*"
   ],
 
   "depends": {
