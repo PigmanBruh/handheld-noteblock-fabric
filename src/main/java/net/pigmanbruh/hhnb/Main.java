@@ -1,7 +1,6 @@
+package net.pigmanbruh.hhnb;
 
-packagepackagpackagepackpackagepackagpackagepacpackagepackagpackagepackpackagepackagpackagepac  net.pigmanbruh.handheldnoteblock;
-
-import net.pigmanbruh.handheldnoteblock.item.ModItem;
+import net.pigmanbruh.hhnb.item.ModItem;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
