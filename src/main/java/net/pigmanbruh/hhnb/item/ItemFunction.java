@@ -10,7 +10,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.sound.SoundEvent;
 
 public class ItemFunction extends Item {
     public ItemFunction(Settings settings) {
