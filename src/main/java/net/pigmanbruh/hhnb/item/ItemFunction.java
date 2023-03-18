@@ -11,7 +11,7 @@ import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.sound.SoundCategory;
 
 public class ItemFunction extends Item {
-    public ItemFunction settings) {
+    public ItemFunction(Settings settings) {
         super(settings);
     }
 
