@@ -20,7 +20,7 @@ public class ItemFunction extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient) {
-            user.playSound(block.note_block.harp, SoundCategory.RECORDS, 1.0F, PITCH);
+            user.playSound(SoundEvents.BLOCK_NOTE_BLOCK_HARP, SoundCategory.RECORDS, 1.0F, PITCH);
             user.getItemCooldownManager().set(this, 1);
         }
         return super.use(world, user, hand);
