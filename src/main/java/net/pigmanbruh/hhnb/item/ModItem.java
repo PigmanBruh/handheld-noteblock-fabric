@@ -1,7 +1,7 @@
 package net.pigmanbruh.hhnb.item;
 
 import net.pigmanbruh.hhnb.Main;
-import net.pigmanbruh.hhnb.ItemFunction;
+import net.pigmanbruh.hhnb.item.ItemFunction;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
