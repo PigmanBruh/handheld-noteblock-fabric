@@ -1,5 +1,7 @@
 package net.pigmanbruh.hhnb.item;
 
+import net.pigmanbruh.hhnb.Main;
+
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
