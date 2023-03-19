@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.pigmanbruh.hhnb.Main"
+    ],
+    "client": [
+      "net.pigmanbruh.hhnb.MainClient"
     ]
   },
   "mixins": [
