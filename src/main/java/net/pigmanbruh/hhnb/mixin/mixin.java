@@ -11,7 +11,5 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(TitleScreen.class)
 public class mixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
-	private void init(CallbackInfo info) {
-		Main.LOGGER.info("This line is printed by "+ Main.Mod_ID +"'s mixin (the mixin doesn't do anything yet) ");
-	}
+	private void init(CallbackInfo info) {}
 }

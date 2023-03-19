@@ -1,4 +1,4 @@
-package net.pigmanbruh.hhnb.item;
+package net.pigmanbruh.hhnb.keybind;
 
 import net.pigmanbruh.hhnb.Main;
 
@@ -28,12 +28,9 @@ public class Keybind {
 
     public void registerKeyInput () {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (changenote.wasPressed()) {
+            if (changenote.wasPressed()) {
                 Main.LOGGER.info("The key is pressed");
             }
         });
-
-    registerKeyInput();
-
     }
 }
