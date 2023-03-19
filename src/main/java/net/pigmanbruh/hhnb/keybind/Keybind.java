@@ -15,10 +15,10 @@ import net.minecraft.entity.player.PlayerEntity;
 
 public class Keybind {
 
-    public static KeyBinding changenote;
+    public KeyBinding changenote;
 
-    public static void registerKeybinds() {
-        changeNote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+    public void registerKeybinds() {
+        changenote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.hhnb.changenote",
             InputUtil.Type.KEYSYM,
             GLFW.GLFW_KEY_Z,
@@ -28,12 +28,9 @@ public class Keybind {
 
     public void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (changeNote.wasPressed()) {
+            if (changenote.wasPressed()) {
                 ItemFunction.ChangePitch();
             }
-        });
-    
-    Keybind.registerKeyInput();
-
+        })
     }
 }
