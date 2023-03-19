@@ -17,10 +17,10 @@ public class ItemFunction extends Item {
         super(settings);
     }
 
-    private int TONE = 0;
-    private float PITCH = 0.5f;
+    private static int TONE = 0;
+    private static float PITCH = 0.5f;
 
-    public void ChangePitch() {
+    public static void ChangePitch() {
         ++TONE;
         if (TONE > 24) {
             int TONE = 0;
