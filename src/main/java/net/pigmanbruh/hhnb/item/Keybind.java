@@ -11,7 +11,7 @@ public class Keybind {
 
     public static KeyBinding changenote;
 
-    public static void registerKeybinds {
+    public static void registerKeybinds() {
         changenote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.hhnb.changenote", // The translation key of the keybinding's name
             InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
@@ -20,7 +20,7 @@ public class Keybind {
         ));
     }
 
-    public static void registerKeyInput {
+    public static void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (keyBinding.wasPressed()) {
                 client.player.sendMessage(Text.literal("Key Z was pressed!"), false);
