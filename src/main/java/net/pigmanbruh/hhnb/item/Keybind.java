@@ -9,6 +9,7 @@ import org.lwjgl.glfw.GLFW;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.entity.player.PlayerEntity;
 
 public class Keybind {
 
@@ -16,17 +17,17 @@ public class Keybind {
 
     public static void registerKeybinds() {
         changenote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-            "key.hhnb.changenote", // The translation key of the keybinding's name
-            InputUtil.Type.KEYSYM, // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
-            GLFW.GLFW_KEY_Z, // The keycode of the key
-            "category.hhnb" // The translation key of the keybinding's category.
+            "key.hhnb.changenote",
+            InputUtil.Type.KEYSYM,
+            GLFW.GLFW_KEY_Z,
+            "category.hhnb"
         ));
     }
 
-    public void registerKeyInput() {
+    public void registerKeyInput use(PlayerEntity user) {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (changenote.wasPressed()) {
-                user.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.RECORDS, 1.0F, PITCH);
+                user.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.RECORDS, 1.0F, 1.0F);
             }
         });
 
