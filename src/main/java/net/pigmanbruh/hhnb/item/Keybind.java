@@ -24,7 +24,7 @@ public class Keybind {
     public static void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (changenote.wasPressed()) {
-                ClientPlayerEntity.sendMessage("Key Z was pressed!", false);
+                ClientPlayerEntity.sendMessage(Text.literal("Key Z was pressed!"), false);
             }
         });
 
