@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
+import net.minecraft.client.network.ClientPlayerEntity;
 
 public class Keybind {
 
@@ -22,8 +23,8 @@ public class Keybind {
 
     public static void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (keyBinding.wasPressed()) {
-                client.player.sendMessage(Text.literal("Key Z was pressed!"), false);
+            while (changenote.wasPressed()) {
+                ClientPlayerEntity.sendMessage("Key Z was pressed!", false);
             }
         });
 
