@@ -1,5 +1,7 @@
 package net.pigmanbruh.hhnb.item;
 
+import net.pigmanbruh.hhnb.Sounds;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
@@ -10,6 +12,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.registry.entry.RegistryEntry.Reference;
 
 public class ItemFunction extends Item {
     public ItemFunction(Settings settings) {
@@ -21,7 +24,7 @@ public class ItemFunction extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient) {
-            user.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.RECORDS, 1.0F, PITCH);
+            user.playSound(RegistryEntry.Reference<BLOCK_NOTE_BLOCK_HARP>, SoundCategory.RECORDS, 1.0F, PITCH);
             user.getItemCooldownManager().set(this, 1);
         }
         return super.use(world, user, hand);
