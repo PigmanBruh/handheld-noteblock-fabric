@@ -15,9 +15,9 @@ import net.minecraft.entity.player.PlayerEntity;
 
 public class Keybind {
 
-    public KeyBinding changenote;
+    public static KeyBinding changenote;
 
-    public void registerKeybinds() {
+    public static void registerKeybinds() {
         changenote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.hhnb.changenote",
             InputUtil.Type.KEYSYM,
@@ -26,7 +26,7 @@ public class Keybind {
         ));
     }
 
-    public void registerKeyInput() {
+    public static void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (changenote.wasPressed()) {
                 ItemFunction.ChangePitch();
