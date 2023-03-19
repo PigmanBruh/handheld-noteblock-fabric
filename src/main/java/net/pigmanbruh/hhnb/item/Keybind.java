@@ -24,7 +24,7 @@ public class Keybind {
         ));
     }
 
-    public void registerKeyInput () {
+    public static void registerKeyInput () {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (changenote.wasPressed()) {
                 PlayerEntity.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.RECORDS, 1.0F, 1.0F);
