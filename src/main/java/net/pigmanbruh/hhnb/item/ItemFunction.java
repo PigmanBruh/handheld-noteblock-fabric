@@ -10,7 +10,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.registry.entry.RegistryEntry.Reference;
+import net.minecraft.registry.entry.RegistryEntry;
 
 public class ItemFunction extends Item {
     public ItemFunction(Settings settings) {
@@ -22,7 +22,7 @@ public class ItemFunction extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if(!world.isClient) {
-            user.playSound(RegistryEntry.Reference.BLOCK_NOTE_BLOCK_HARP, SoundCategory.RECORDS, 1.0F, PITCH);
+            user.playSound(RegistryEntry.Reference<SoundEvent> BLOCK_NOTE_BLOCK_HARP, SoundCategory.RECORDS, 1.0F, PITCH);
             user.getItemCooldownManager().set(this, 1);
         }
         return super.use(world, user, hand);
