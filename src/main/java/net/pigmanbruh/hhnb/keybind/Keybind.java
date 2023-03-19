@@ -31,6 +31,9 @@ public class Keybind {
             if (changenote.wasPressed()) {
                 ItemFunction.ChangePitch();
             }
-        })
+        });
+    
+    registerKeyInput();
+
     }
 }
