@@ -1,6 +1,6 @@
 package net.pigmanbruh.hhnb.keybind;
 
-import net.pigmanbruh.hhnb.Main;
+import net.pigmanbruh.hhnb.item.ItemFunction;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
@@ -18,7 +18,7 @@ public class Keybind {
     public static KeyBinding changenote;
 
     public static void registerKeybinds() {
-        changenote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+        changeNote = KeyBindingHelper.registerKeyBinding(new KeyBinding(
             "key.hhnb.changenote",
             InputUtil.Type.KEYSYM,
             GLFW.GLFW_KEY_Z,
@@ -26,11 +26,14 @@ public class Keybind {
         ));
     }
 
-    public void registerKeyInput () {
+    public void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (changenote.wasPressed()) {
-                Main.LOGGER.info("The key is pressed");
+            if (changeNote.wasPressed()) {
+                ItemFunction.ChangePitch();
             }
         });
+    
+    Keybind.registerKeyInput();
+
     }
 }
