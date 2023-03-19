@@ -28,7 +28,7 @@ public class Keybind {
 
     public static void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            if (changenote.wasPressed()) {
+            while (changenote.wasPressed()) {
                 ItemFunction.ChangePitch();
             }
         });
