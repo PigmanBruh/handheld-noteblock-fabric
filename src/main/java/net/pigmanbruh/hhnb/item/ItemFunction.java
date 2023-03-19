@@ -18,7 +18,7 @@ public class ItemFunction extends Item {
     }
 
     private int TONE = 0;
-    private float PITCH = 0.5f
+    private float PITCH = 0.5f;
 
     public void ChangePitch() {
         ++TONE;
