@@ -1,7 +1,6 @@
 package net.pigmanbruh.hhnb;
 
 import net.pigmanbruh.hhnb.item.ModItem;
-import net.pigmanbruh.hhnb.sounds.Sounds;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -15,6 +14,5 @@ public class Main implements ModInitializer {
     public void onInitialize() {
         ModItem.registerItem();
         ModItem.addItemsToItemGroups();
-        Sounds.registerSounds();
     }
 }
