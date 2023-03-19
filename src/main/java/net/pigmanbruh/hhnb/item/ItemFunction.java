@@ -1,7 +1,5 @@
 package net.pigmanbruh.hhnb.item;
 
-import net.pigmanbruh.hhnb.Sounds;
-
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
