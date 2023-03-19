@@ -7,7 +7,8 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.text.Text;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 
 public class Keybind {
 
@@ -25,7 +26,7 @@ public class Keybind {
     public void registerKeyInput() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (changenote.wasPressed()) {
-                ClientPlayerEntity.sendMessage(Text.literal("Key Z was pressed!"), false);
+                user.playSound(SoundEvents.BLOCK_ANVIL_LAND, SoundCategory.RECORDS, 1.0F, PITCH);
             }
         });
 
