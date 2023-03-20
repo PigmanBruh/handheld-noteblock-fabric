@@ -11,6 +11,7 @@ import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.nbt.NbtElement;
 
 public class ItemFunction extends Item {
     public ItemFunction(Settings settings) {
@@ -18,7 +19,7 @@ public class ItemFunction extends Item {
     }
 
     public void nbtStuff() {
-        ItemStack.setSubNbt("tone", TONE);
+        ItemStack.setSubNbt("tone", 5);
     }
 
     private static int TONE = 0;
