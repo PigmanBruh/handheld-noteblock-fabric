@@ -19,7 +19,7 @@ public class ItemFunction extends Item {
     }
 
     public void nbtStuff() {
-        ItemStack.setSubNbt("tone", 5);
+        ItemStack.setSubNbt("tone", NbtElement.INT_TYPE);
     }
 
     private static int TONE = 0;
