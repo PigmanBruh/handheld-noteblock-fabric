@@ -75,11 +75,11 @@ public class ItemFunction extends Item {
         }
     }
 
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if(!world.isClient) {
-            user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
-            user.getItemCooldownManager().set(this, 1);
+    public TypedActionResult<ItemStack> use(World world1, PlayerEntity user1, Hand hand1) {
+        if(!world1.isClient) {
+            user1.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
+            user1.getItemCooldownManager().set(this, 1);
         }
-    return super.use(world, user, hand);
+    return super.use(world1, user1, hand1);
     }
 }
