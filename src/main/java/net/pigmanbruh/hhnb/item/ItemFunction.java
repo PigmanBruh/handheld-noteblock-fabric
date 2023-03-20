@@ -17,8 +17,8 @@ public class ItemFunction extends Item {
         super(settings);
     }
 
-    public ItemStack() {
-        setSubNbt("tone", int = TONE);
+    public void nbtStuff() {
+        ItemStack.setSubNbt("tone", int = TONE);
     }
 
     private static int TONE = 0;
