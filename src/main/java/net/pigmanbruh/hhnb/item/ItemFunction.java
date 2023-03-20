@@ -57,29 +57,33 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use() {
-        if(PlayerEntity.getStackInHand(Hand).hasNbt()) {
-            PlayerEntity.getStackInHand(Hand).setNbt(new NbtCompound());
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if(user.getStackInHand(hand).hasNbt()) {
+            user.getStackInHand(hand).setNbt(new NbtCompound());
         }
+        return super.use(world, user, hand);
     }
 
     @Override
     public boolean hasGlint(ItemStack stack) {
         return stack.hasNbt();
+        return super.use(stack);
     }
 
     @Override
-    public void appendTooltip () {
-        if(ItemStack.hasNbt()) {
-            Int currentNote = ItemStack.getNbt().getInt(hhnb.current_note);
+    public void appendTooltip(ItemStack stack, World world,) {
+        if(stack.hasNbt()) {
+            Int currentNote = stack.getNbt().getInt(NOTE);
         }
+        return super.use(stack, world);
     }
 
     @Override
-    public TypedActionResult<ItemStack> use() {
-        if(!World.isClient) {
-            PlayerEntity.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
-            PlayerEntity.getItemCooldownManager().set(this, 1);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if(!world.isClient) {
+            user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
+            user.getItemCooldownManager().set(this, 1);
         }
+    return super.use(world, user, hand);
     }
 }
