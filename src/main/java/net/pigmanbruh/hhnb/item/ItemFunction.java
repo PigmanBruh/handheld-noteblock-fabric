@@ -71,7 +71,7 @@ public class ItemFunction extends Item {
 
     public void appendTooltip(ItemStack stack, World world) {
         if(stack.hasNbt()) {
-            String currentNote = stack.getNbt().getInt(tone);
+            String currentNote = stack.getNbt().getInt();
         }
     }
 
@@ -80,6 +80,5 @@ public class ItemFunction extends Item {
             user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
             user.getItemCooldownManager().set(this, 1);
         }
-    return super.use(world, user);
     }
 }
