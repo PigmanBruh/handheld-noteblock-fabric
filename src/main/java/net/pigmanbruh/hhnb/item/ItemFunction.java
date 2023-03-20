@@ -71,7 +71,7 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, World world,) {
+    public void appendTooltip(ItemStack stack, World world) {
         if(stack.hasNbt()) {
             Int currentNote = stack.getNbt().getInt(NOTE);
         }
