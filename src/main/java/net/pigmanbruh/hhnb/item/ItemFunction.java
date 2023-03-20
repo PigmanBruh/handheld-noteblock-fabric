@@ -78,7 +78,7 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> () {
+    public TypedActionResult<ItemStack> use() {
         if(!world.isClient) {
             user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
             user.getItemCooldownManager().set(this, 1);
