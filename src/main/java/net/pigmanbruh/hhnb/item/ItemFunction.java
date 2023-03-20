@@ -17,6 +17,10 @@ public class ItemFunction extends Item {
         super(settings);
     }
 
+    public static void nbtStuff() {
+        ItemStack.setSubNbt(tone, INT = TONE);
+    }
+
     private static int TONE = 0;
     private static float PITCH = 0.5f;
 
