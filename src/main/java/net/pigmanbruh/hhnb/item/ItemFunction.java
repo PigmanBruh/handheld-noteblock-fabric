@@ -12,13 +12,14 @@ import net.minecraft.util.Hand;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.nbt.NbtElement;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.text.Text;
+import net.minecraft.client.item.TooltipContext;
 
 public class ItemFunction extends Item {
     public ItemFunction(Settings settings) {
         super(settings);
     }
-
-
 
     private static int TONE = 0;
     private static float PITCH = 0.5f;
@@ -69,19 +70,17 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext contect) {
-        if(stack.hasNbt()) {
-            String currentNote = stack.getNbt().getInt("hhnb.current_note");
-            tooltip.add(new LiteralText(currentNote));
+    public void appendTooltip () {
+        if(ItemStack.hasNbt()) {
+            Int currentNote = ItemStack.getNbt().getInt(hhnb.current_note);
         }
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if(!world.isClient) {
-            user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
-            user.getItemCooldownManager().set(this, 1);
+    public TypedActionResult<ItemStack> () {
+        if(!World.isClient) {
+            PlayerEntity.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
+            PlayerEntity.getItemCooldownManager().set(this, 1);
         }
-        return super.use(world, user, hand);
     }
 }
