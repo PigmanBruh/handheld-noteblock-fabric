@@ -61,7 +61,7 @@ public class ItemFunction extends Item {
         if(user.getStackInHand(hand).hasNbt()) {
             user.getStackInHand(hand).setNbt(new NbtCompound());
         }
-        return super.use(world, user, hand);
+    return super.use(world, user, hand);
     }
 
     @Override
