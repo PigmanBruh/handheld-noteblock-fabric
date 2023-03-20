@@ -67,7 +67,6 @@ public class ItemFunction extends Item {
     @Override
     public boolean hasGlint(ItemStack stack) {
         return stack.hasNbt();
-        return super.use(stack);
     }
 
     @Override
@@ -79,7 +78,7 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+    public TypedActionResult<ItemStack> () {
         if(!world.isClient) {
             user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
             user.getItemCooldownManager().set(this, 1);
