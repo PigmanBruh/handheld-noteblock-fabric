@@ -61,7 +61,6 @@ public class ItemFunction extends Item {
         if(user.getStackInHand(hand).hasNbt()) {
             user.getStackInHand(hand).setNbt(new NbtCompound());
         }
-    return super.use(world, user, hand);
     }
 
     @Override
@@ -75,11 +74,11 @@ public class ItemFunction extends Item {
         }
     }
 
-    public TypedActionResult<ItemStack> use(World world1, PlayerEntity user1, Hand hand1) {
+    public TypedActionResult<ItemStack> use() {
         if(!world1.isClient) {
             user1.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
             user1.getItemCooldownManager().set(this, 1);
         }
-    return super.use(world1, user1, hand1);
+    return super.use(world, user, hand);
     }
 }
