@@ -71,7 +71,7 @@ public class ItemFunction extends Item {
 
     public void appendTooltip(ItemStack stack, World world) {
         if(stack.hasNbt()) {
-            String currentNote = stack.getNbt().getInt();
+            String currentNote = stack.getNbt().getInt(tone);
         }
     }
 
