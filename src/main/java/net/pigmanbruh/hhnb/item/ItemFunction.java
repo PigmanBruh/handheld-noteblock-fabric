@@ -57,11 +57,10 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if(user.getStackInHand(hand).hasNbt()) {
-            user.getStackInHand(hand).setNbt(new NbtCompound());
+    public TypedActionResult<ItemStack> () {
+        if(PlayerEntity.getStackInHand(Hand).hasNbt()) {
+            PlayerEntity.getStackInHand(Hand).setNbt(new NbtCompound());
         }
-        return super.use(world, user, hand);
     }
 
     @Override
