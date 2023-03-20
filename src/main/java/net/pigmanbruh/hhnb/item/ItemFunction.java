@@ -57,7 +57,7 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> () {
+    public TypedActionResult<ItemStack> use() {
         if(PlayerEntity.getStackInHand(Hand).hasNbt()) {
             PlayerEntity.getStackInHand(Hand).setNbt(new NbtCompound());
         }
@@ -76,7 +76,7 @@ public class ItemFunction extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> () {
+    public TypedActionResult<ItemStack> use() {
         if(!World.isClient) {
             PlayerEntity.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
             PlayerEntity.getItemCooldownManager().set(this, 1);
