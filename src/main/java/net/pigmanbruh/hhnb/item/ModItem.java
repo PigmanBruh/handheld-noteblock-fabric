@@ -13,7 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItem {
-    public static final Item HANDHELD_NOTEBLOCK = new ItemFunction(new FabricItemSettings());
+    public static final Item HANDHELD_NOTEBLOCK = new ItemFunction(new FabricItemSettings().maxCount(1));
 
     public static void registerItem() {
         Registry.register(Registries.ITEM, new Identifier(Main.Mod_ID, "handheld_noteblock"), HANDHELD_NOTEBLOCK);

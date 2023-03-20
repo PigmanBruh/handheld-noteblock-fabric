@@ -18,9 +18,7 @@ public class ItemFunction extends Item {
         super(settings);
     }
 
-    public void nbtStuff() {
-        ItemStack.setSubNbt("tone", NbtElement.INT_TYPE);
-    }
+
 
     private static int TONE = 0;
     private static float PITCH = 0.5f;
@@ -55,6 +53,27 @@ public class ItemFunction extends Item {
             else if (TONE == 22) {PITCH = 1.781797f;}
             else if (TONE == 23) {PITCH = 1.887749f;}
             else if (TONE == 24) {PITCH = 2.0f;}
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        if(user.getStackInHand(hand).hasNbt()) {
+            user.getStackInHand(hand).setNbt(new NbtCompound());
+        }
+        return super.use(world, user, hand);
+    }
+
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return stack.hasNbt();
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext contect) {
+        if(stack.hasNbt()) {
+            String currentNote = stack.getNbt().getInt("hhnb.current_note");
+            tooltip.add(new LiteralText(currentNote));
+        }
     }
 
     @Override
