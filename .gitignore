@@ -41,4 +41,4 @@ replay_*.log
 
 # mc sources
 
-mc-sources/
+mc_sources/
