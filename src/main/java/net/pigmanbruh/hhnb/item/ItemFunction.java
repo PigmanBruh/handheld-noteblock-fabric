@@ -69,12 +69,6 @@ public class ItemFunction extends Item {
         return stack.hasNbt();
     }
 
-    public void appendTooltip(ItemStack stack, World world) {
-        if(stack.hasNbt()) {
-            String currentNote = stack.getNbt().getInt(tone);
-        }
-    }
-
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user) {
         if(!world.isClient) {
             user.playSound(Sounds.HHNB_HARP_EVENT, SoundCategory.RECORDS, 1.0f, PITCH);
